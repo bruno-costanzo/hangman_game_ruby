@@ -12,7 +12,7 @@ module Display
   # Say the player welcome to the game
   def welcome_output
     hangman_title = File.read('./ascii_imgs/HangmanLogo.txt')
-    hangman_logo = File.read('./ascii_imgs/Hangman_guy.txt')
+    hangman_logo = File.read('./ascii_imgs/hangman_guy.txt')
     puts 'Welcome to...'
     puts hangman_title, "\n"
     puts hangman_logo, "\n"
@@ -47,6 +47,6 @@ module Display
   end
 
   def display_score(score)
-    puts "SCORE ==> You: #{score[0]}, Computer = #{score[1]}"
+    puts "SCORE ==> You: #{score[0]}, Computer: #{score[1]}"
   end
 end
