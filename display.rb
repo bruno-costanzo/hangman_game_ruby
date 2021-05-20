@@ -25,9 +25,14 @@ module Display
   end
 
   def pick_letter_display
-    puts 'Pick your next guess: '
+    puts "Pick your next guess or enter 'save' to save the game"
     print '==> '
     true
+  end
+
+  def display_game_to_save
+    puts 'Enter a name for this game:'
+    print '==>  '
   end
 
   def display_winner(name)
@@ -46,7 +51,20 @@ module Display
     puts "Do you want to play again? 'y': yes, 'n': no"
   end
 
-  def display_score(score)
-    puts "SCORE ==> You: #{score[0]}, Computer: #{score[1]}"
+  def display_new_game_or_load_msg
+    puts 'What do you want to do? (n)ew game | (l)oad game'
   end
+
+  def display_load_list
+    puts 'Saved games list'
+    file_list = Dir.entries('scores').select do |file|
+      file if file.include?('.yaml')
+    end
+    file_list.each_with_index do |file, idx|
+      puts "#{idx + 1} --> #{file[0..-6]}"
+    end
+    print 'Game to load ==> #'
+    file_list
+  end
+
 end

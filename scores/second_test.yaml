@@ -1,0 +1,28 @@
+---
+word: dysphasia
+player_name: bruno
+tries: 1
+player_word_array:
+- d
+- y
+- s
+- _
+- _
+- a
+- s
+- i
+- a
+letters_already_used:
+- a
+- e
+- i
+- o
+- b
+- f
+- u
+- save
+- j
+- d
+- y
+- s
+- save
